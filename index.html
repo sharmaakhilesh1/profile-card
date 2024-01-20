@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: block;
+        margin: 0px;
+      }
+      .header {
+        height: 3rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        align-items: center;
+        background-color: cadetblue;
+      }
+
+      .logo {
+        height: 10rem;
+        mix-blend-mode: multiply;
+      }
+      .profile-icon {
+        height: 3rem;
+        mix-blend-mode: multiply;
+      }
+      .user-card {
+        display: none;
+        position: absolute;
+        top: 4rem;
+        right: 2rem;
+        width: 20rem;
+        background-color: rgb(193, 246, 248);
+        box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        z-index: 1000;
+      }
+      .msg {
+        margin: 0px auto;
+        left: 45%;
+        right: 45%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(204, 240, 228)">
+    <div class="header">
+      <img class="logo" src="./logo.png" alt="Logo" />
+      <img
+        class="profile-icon"
+        src="./profile-icon.png"
+        alt="Profile-Icon"
+        onmouseover="showUserCard()"
+        onmouseout="hideUserCard()"
+      />
+      <div class="user-card" id="userCard">
+        <div class="user-details">
+          <p>Luna Lovegood</p>
+          <p>lovegood@example.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="msg">Hover on Profile icon...</div>
+    <script src="./script.js"></script>
+  </body>
+</html>
